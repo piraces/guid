@@ -2,7 +2,7 @@ name: NPM Package
 
 on:
   release:
-    types: [published, edited, created]
+    types: [published, created]
 
 jobs:
   build:

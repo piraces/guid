@@ -1,4 +1,4 @@
-name: BPM Package
+name: NPM Package
 
 on:
   release:

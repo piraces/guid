@@ -1,6 +1,4 @@
 export class Guid {
-  public static Empty = new Guid();
-
   private static readonly patternV4 = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[4][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/i;
   private static readonly emptyStr = '00000000-0000-0000-0000-000000000000';
   private static readonly MAX_INT_32 = 4294967295;
@@ -17,6 +15,10 @@ export class Guid {
       this.contentStr = Guid.emptyStr;
       this.contentInt = -1;
     }
+  }
+
+  public static empty() {
+    return new Guid();
   }
 
   public static newGuid(): Guid {
@@ -70,8 +72,14 @@ export class Guid {
   }
 
   private static generateRandomDecimal(): number {
-    return typeof crypto !== 'undefined'
-      ? crypto.getRandomValues(new Uint32Array(1))[0] / Guid.MAX_INT_32
+    const cryptoObj = Guid.getCryptoImplementation();
+    return typeof cryptoObj !== 'undefined'
+      ? cryptoObj.getRandomValues(new Uint32Array(1))[0] / Guid.MAX_INT_32
       : Math.random();
+  }
+
+  private static getCryptoImplementation(): Crypto {
+    // @ts-ignore: msCrypto does not exists in window (only for IE11)
+    return window.crypto || window.msCrypto;
   }
 }

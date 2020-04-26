@@ -41,13 +41,23 @@ test('Generate GUID from constructor with invalid string is empty', () => {
   expect(guid.isEmpty()).toBeTruthy();
 });
 
-test('Generate GUID using static empty method is not valid', () => {
+test('Generate GUID using empty constructor is not valid', () => {
   const guid = new Guid();
   expect(guid.isValid()).toBeFalsy();
 });
 
-test('Generate GUID using static empty method is empty', () => {
+test('Generate GUID using empty constructor is empty', () => {
   const guid = new Guid();
+  expect(guid.isEmpty()).toBeTruthy();
+});
+
+test('Generate GUID using static empty method is not valid', () => {
+  const guid = Guid.empty();
+  expect(guid.isValid()).toBeFalsy();
+});
+
+test('Generate GUID using static empty method is empty', () => {
+  const guid = Guid.empty();
   expect(guid.isEmpty()).toBeTruthy();
 });
 
@@ -67,6 +77,6 @@ test('Generate GUID from constructor with no value returns -1 number value', () 
 });
 
 test('Generate GUID using static empty method returns -1 number value', () => {
-  const guid = Guid.Empty;
+  const guid = Guid.empty();
   expect(guid.toNumber()).toBe(-1);
 });

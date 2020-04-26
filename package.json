@@ -1,5 +1,5 @@
 {
-  "name": "guid",
+  "name": "guid-ts",
   "version": "0.9.0",
   "description": "NPM package for generating and managing globally unique identifiers (GUIDs)",
   "main": "lib/index.js",

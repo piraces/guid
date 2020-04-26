@@ -1,4 +1,6 @@
-# guid-ts ![Build and Test Typescript CI](https://github.com/piraces/guid-ts/workflows/Build%20and%20Test%20Typescript%20CI/badge.svg?branch=master)
+# guid-ts
+
+![Build and Test Typescript CI](https://github.com/piraces/guid-ts/workflows/Build%20and%20Test%20Typescript%20CI/badge.svg?branch=master) ![npm bundle size](https://img.shields.io/bundlephobia/min/guid-ts)
 
 NPM package for generating and managing globally unique identifiers (GUIDs) in Typescript.
 

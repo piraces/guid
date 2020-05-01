@@ -45,6 +45,10 @@ const newGuid = Guid.newGuid(); // => ex: b631e90e-6e7f-488e-88fb-a7c2ef44bb8d
 
 You can use and test the package online on Stackblitz, checkout our example playground: [guid-ts-playground](https://stackblitz.com/edit/guid-ts-playground).
 
+## Documentation
+
+You can find all the code documentation in [https://piraces.github.io/guid-ts/index.html](https://piraces.github.io/guid-ts/index.html).
+The documentation is generated using [TypeDoc](https://typedoc.org/), and resides in the `docs` folder. 
 
 ## How does it works?
 

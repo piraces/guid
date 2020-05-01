@@ -3,9 +3,59 @@ import { Guid } from '../index';
 const TestGuidString = '6531b3a1-e00b-4c82-8a7d-0fbfc34cf2fc';
 const TestGuidNumber = 0x6531b3a1e00b4c828a7d0fbfc34cf2fc;
 const TestInvalidGuidString = 'b68b422c-3897-4aba-1ee2-f8e4f160bf00';
+const TestFixedValues = [167, 69, 83, 48, 57, 88, 151, 132, 49, 172, 215, 201, 179, 96, 159, 219];
+
+const cryptoMock = {
+  subtle: {
+    encrypt() {
+      return {} as PromiseLike<ArrayBuffer>;
+    },
+    decrypt() {
+      return {} as PromiseLike<ArrayBuffer>;
+    },
+    deriveBits() {
+      return {} as PromiseLike<ArrayBuffer>;
+    },
+    deriveKey() {
+      return {} as PromiseLike<CryptoKey>;
+    },
+    digest() {
+      return {} as PromiseLike<ArrayBuffer>;
+    },
+    exportKey() {
+      return {} as Promise<any>;
+    },
+    generateKey() {
+      return {} as Promise<any>;
+    },
+    importKey() {
+      return {} as Promise<any>;
+    },
+    sign() {
+      return {} as Promise<any>;
+    },
+    unwrapKey() {
+      return {} as Promise<any>;
+    },
+    verify() {
+      return {} as Promise<any>;
+    },
+    wrapKey() {
+      return {} as Promise<any>;
+    },
+  },
+  getRandomValues<T>(): T {
+    return (Uint8Array.from(TestFixedValues) as unknown) as T;
+  },
+};
 
 test('Generated GUID by newGuid() is valid', () => {
   const guid = Guid.newGuid();
+  expect(guid.isValid()).toBeTruthy();
+});
+
+test('Generated GUID by newGuid() with custom implementation is valid', () => {
+  const guid = Guid.newGuid(cryptoMock);
   expect(guid.isValid()).toBeTruthy();
 });
 

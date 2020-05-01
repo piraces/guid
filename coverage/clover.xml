@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1588357447493" clover="3.2.0">
-  <project timestamp="1588357447493" name="All files">
-    <metrics statements="44" coveredstatements="38" conditionals="29" coveredconditionals="22" methods="17" coveredmethods="15" elements="90" coveredelements="75" complexity="0" loc="44" ncloc="44" packages="1" files="1" classes="1"/>
+<coverage generated="1588361549197" clover="3.2.0">
+  <project timestamp="1588361549198" name="All files">
+    <metrics statements="44" coveredstatements="41" conditionals="29" coveredconditionals="24" methods="17" coveredmethods="16" elements="90" coveredelements="81" complexity="0" loc="44" ncloc="44" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="C:\Custom\DEV\guid-ts\src\index.ts">
-      <metrics statements="44" coveredstatements="38" conditionals="29" coveredconditionals="22" methods="17" coveredmethods="15"/>
+      <metrics statements="44" coveredstatements="41" conditionals="29" coveredconditionals="24" methods="17" coveredmethods="16"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="256" type="stmt"/>
@@ -20,9 +20,9 @@
       <line num="27" count="9" type="stmt"/>
       <line num="37" count="3" type="stmt"/>
       <line num="51" count="1" type="stmt"/>
-      <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="61" count="0" type="stmt"/>
-      <line num="63" count="0" type="stmt"/>
+      <line num="60" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="61" count="2" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
       <line num="72" count="22" type="cond" truecount="2" falsecount="0"/>
       <line num="73" count="17" type="stmt"/>
       <line num="75" count="5" type="stmt"/>

@@ -80,3 +80,15 @@ test('Generate GUID using static empty method returns -1 number value', () => {
   const guid = Guid.empty();
   expect(guid.toNumber()).toBe(-1);
 });
+
+test('Validate GUID string using static isValid method returns true with valid GUID string', () => {
+  expect(Guid.isValid(TestGuidString)).toBeTruthy();
+});
+
+test('Validate GUID string using static isValid method returns false with invalid GUID string', () => {
+  expect(Guid.isValid(TestInvalidGuidString)).toBeFalsy();
+});
+
+test('Validate GUID string using static isValid method returns false with empty string', () => {
+  expect(Guid.isValid('')).toBeFalsy();
+});

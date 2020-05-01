@@ -10,7 +10,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jestconfig.json --coverage",
     "build": "tsc",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --fix --ext .ts ./src",

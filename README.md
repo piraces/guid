@@ -2,7 +2,7 @@
 
 ![Build and Test Typescript CI](https://github.com/piraces/guid-ts/workflows/Build%20and%20Test%20Typescript%20CI/badge.svg?branch=master) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=piraces_guid-ts&metric=alert_status)](https://sonarcloud.io/dashboard?id=piraces_guid-ts) ![npm bundle size](https://img.shields.io/bundlephobia/min/guid-ts) 
 
-NPM package for generating and managing globally unique identifiers (GUIDs) in Typescript.
+Package for generating and managing globally unique identifiers (GUIDs) v4 in Typescript.
 
 Lightweight, simple, dependency free, and reliable package.
 

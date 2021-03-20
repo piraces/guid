@@ -8,19 +8,19 @@ const TestFixedValues = [167, 69, 83, 48, 57, 88, 151, 132, 49, 172, 215, 201, 1
 const cryptoMock = {
   subtle: {
     encrypt() {
-      return {} as PromiseLike<ArrayBuffer>;
+      return {} as Promise<ArrayBuffer>;
     },
     decrypt() {
-      return {} as PromiseLike<ArrayBuffer>;
+      return {} as Promise<ArrayBuffer>;
     },
     deriveBits() {
-      return {} as PromiseLike<ArrayBuffer>;
+      return {} as Promise<ArrayBuffer>;
     },
     deriveKey() {
-      return {} as PromiseLike<CryptoKey>;
+      return {} as Promise<CryptoKey>;
     },
     digest() {
-      return {} as PromiseLike<ArrayBuffer>;
+      return {} as Promise<ArrayBuffer>;
     },
     exportKey() {
       return {} as Promise<any>;

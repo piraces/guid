@@ -168,7 +168,7 @@ export class Guid {
     const cryptoObj = Guid.getCryptoImplementation();
     if (typeof generator !== 'undefined') {
       return Guid.getCryptoRandomBytes(generator);
-    } else if(typeof cryptoObj !== 'undefined') {
+    } else if (typeof cryptoObj !== 'undefined') {
       return Guid.getCryptoRandomBytes(cryptoObj);
     } else {
       return Guid.getRandomBytes();

@@ -1,6 +1,7 @@
 import { Guid } from '../index';
 
 const TestGuidString = '6531b3a1-e00b-4c82-8a7d-0fbfc34cf2fc';
+// eslint-disable-next-line no-loss-of-precision
 const TestGuidNumber = 0x6531b3a1e00b4c828a7d0fbfc34cf2fc;
 const TestInvalidGuidString = 'b68b422c-3897-4aba-1ee2-f8e4f160bf00';
 const TestFixedValues = [167, 69, 83, 48, 57, 88, 151, 132, 49, 172, 215, 201, 179, 96, 159, 219];
@@ -45,7 +46,7 @@ const cryptoMock = {
     },
   },
   getRandomValues<T>(): T {
-    return (Uint8Array.from(TestFixedValues) as unknown) as T;
+    return Uint8Array.from(TestFixedValues) as unknown as T;
   },
 };
 

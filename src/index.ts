@@ -4,7 +4,8 @@ for (let i = 0; i < 256; ++i) {
 }
 
 export class Guid {
-  private static readonly patternV4 = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[4][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/i; // RegEx to validate v4 UUIDs.
+  private static readonly patternV4 =
+    /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[4][0-9a-fA-F]{3}-[89ab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/i; // RegEx to validate v4 UUIDs.
   private static readonly emptyStr = '00000000-0000-0000-0000-000000000000'; // Represents an empty formatted GUID.
   private static readonly MAX_UINT_8 = 255; // Max value of an unsigned 8-bit integer.
 

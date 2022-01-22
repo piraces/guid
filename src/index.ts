@@ -166,9 +166,13 @@ export class Guid {
    */
   private static generateRandomBytes(generator?: Crypto): Uint8Array {
     const cryptoObj = Guid.getCryptoImplementation();
-    return typeof cryptoObj !== 'undefined' || typeof generator !== 'undefined'
-      ? Guid.getCryptoRandomBytes(generator || cryptoObj)
-      : Guid.getRandomBytes();
+    if (typeof generator !== 'undefined') {
+      return Guid.getCryptoRandomBytes(generator);
+    } else if(typeof cryptoObj !== 'undefined') {
+      return Guid.getCryptoRandomBytes(cryptoObj);
+    } else {
+      return Guid.getRandomBytes();
+    }
   }
 
   /**
@@ -212,7 +216,10 @@ export class Guid {
    *
    * @returns Crypto object from the browser implementation.
    */
-  private static getCryptoImplementation(): Crypto {
+  private static getCryptoImplementation(): Crypto | undefined {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
     // @ts-ignore: msCrypto does not exists in window (only for IE11)
     return window.crypto || window.msCrypto;
   }

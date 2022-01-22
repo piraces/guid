@@ -1,6 +1,6 @@
 {
   "name": "guid-ts",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "NPM package for generating and managing globally unique identifiers (GUIDs)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

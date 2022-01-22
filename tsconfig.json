@@ -7,7 +7,6 @@
       "strict": true
     },
     "typedocOptions": {
-      "mode": "modules",
       "out": "docs",
       "exclude": "**/*+(e2e|spec|test).ts"
     },
